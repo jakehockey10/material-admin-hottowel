@@ -31,8 +31,8 @@
       vm.skinSwitch = switchSkin;
     }
 
-    // Welcome Message TODO: Change to current user when that's working
     function welcomeMessage() {
+      // Welcome Message TODO: Change to current user when that's working
       GrowlService.growl('Welcome back Mallinda!', 'inverse');
     }
 
