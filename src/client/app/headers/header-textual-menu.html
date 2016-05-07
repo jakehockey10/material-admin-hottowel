@@ -1,5 +1,5 @@
 <ul class="header-inner clearfix">
-    <li id="menu-trigger" data-target="mainmenu" data-toggle-sidebar data-model-left="vm.sidebarToggle.left" data-ng-class="{ 'open': vm.sidebarToggle.left === true }">
+    <li id="menu-trigger" data-target="mainmenu" data-toggle-sidebar data-model-left="sidebarVM.sidebarToggle.left" data-ng-class="{ 'open': sidebarVM.sidebarToggle.left === true }">
         <div class="line-wrap">
             <div class="line top"></div>
             <div class="line center"></div>
@@ -8,7 +8,7 @@
     </li>
 
     <li class="logo hidden-xs">
-        <a data-ui-sref="home" data-ng-click="vm.sidebarStat($event)">Material Admin</a>
+        <a data-ui-sref="home" data-ng-click="sidebarVM.sidebarState($event)">Material Admin</a>
     </li>
 
     <li class="pull-right">

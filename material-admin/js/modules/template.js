@@ -3,22 +3,22 @@ materialAdmin
     // =========================================================================
     // LAYOUT
     // =========================================================================
-    
+
     .directive('changeLayout', function(){
-        
+
         return {
             restrict: 'A',
             scope: {
                 changeLayout: '='
             },
-            
+
             link: function(scope, element, attr) {
-                
+
                 //Default State
                 if(scope.changeLayout === '1') {
                     element.prop('checked', true);
                 }
-                
+
                 //Change State
                 element.on('change', function(){
                     if(element.is(':checked')) {
@@ -52,10 +52,10 @@ materialAdmin
                 modelLeft: '=',
                 modelRight: '='
             },
-            
+
             link: function(scope, element, attr) {
                 element.on('click', function(){
- 
+
                     if (element.data('target') === 'mainmenu') {
                         if (scope.modelLeft === false) {
                             scope.$apply(function(){
@@ -68,7 +68,7 @@ materialAdmin
                             })
                         }
                     }
-                    
+
                     if (element.data('target') === 'chat') {
                         if (scope.modelRight === false) {
                             scope.$apply(function(){
@@ -80,16 +80,16 @@ materialAdmin
                                 scope.modelRight = false;
                             })
                         }
-                        
+
                     }
                 })
             }
         }
-    
-    })
-    
 
-    
+    })
+
+
+
     // =========================================================================
     // SUBMENU TOGGLE
     // =========================================================================
@@ -111,7 +111,7 @@ materialAdmin
     // =========================================================================
     // STOP PROPAGATION
     // =========================================================================
-    
+
     .directive('stopPropagate', function(){
         return {
             restrict: 'C',
@@ -138,16 +138,15 @@ materialAdmin
     // =========================================================================
     // PRINT
     // =========================================================================
-    
+
     .directive('print', function(){
         return {
             restrict: 'A',
             link: function(scope, element){
                 element.click(function(){
                     window.print();
-                })   
+                })
             }
         }
     })
 
-   

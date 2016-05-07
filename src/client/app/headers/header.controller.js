@@ -23,8 +23,15 @@
     vm.clearNotification = clearNotification;
     vm.clearLocalStorage = clearLocalStorage;
     vm.fullScreen = fullScreen;
+    vm.switchSkin = switchSkin;
+
+    activate();
 
     ////////////////
+
+    function activate(){
+      initializeSkins();
+    }
 
     function openSearch (){
       angular.element('#header').addClass('search-toggled');
@@ -108,6 +115,26 @@
         launchIntoFullscreen(document.documentElement);
       }
     }
+
+    function initializeSkins(){
+      // Skin Switch
+      vm.currentSkin = 'blue';
+      vm.skinList = [
+        'lightblue',
+        'bluegray',
+        'cyan',
+        'teal',
+        'green',
+        'orange',
+        'blue',
+        'purple'
+      ];
+    }
+
+    function switchSkin(color) {
+      vm.currentSkin = color;
+    }
+
   }
 
 })();

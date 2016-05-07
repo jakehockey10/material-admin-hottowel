@@ -19,16 +19,11 @@
     function activate() {
       welcomeMessage();
       detectMobileBrowser();
-      initializeSidebarToggle();
       initializeLayoutType();
       // For Mainmenu Active Class
       vm.$state = $state;
-      // Close sidebar on click
-      vm.sidebarState = sidebarState;
       initializeListView();
       initializeBlog();
-      initializeSkins();
-      vm.skinSwitch = switchSkin;
     }
 
     function welcomeMessage() {
@@ -43,24 +38,9 @@
       }
     }
 
-    function initializeSidebarToggle() {
-      // By default Sidebars are hidden in boxed layout and
-      // in wide layout only the right sidebar is hidden.
-      vm.sidebarToggle = {
-        left: false,
-        right: false
-      };
-    }
-
     function initializeLayoutType() {
       // By default template has a boxed layout
       vm.layoutType = localStorage.getItem('ma-layout-status');
-    }
-
-    function sidebarState(event) {
-      if (!angular.element(event.target).parent().hasClass('active')) {
-        vm.sidebarToggle.left = false;
-      }
     }
 
     function initializeListView() {
@@ -81,25 +61,6 @@
       vm.wallImage = false;
       vm.wallVideo = false;
       vm.wallLink = false;
-    }
-
-    function initializeSkins(){
-      // Skin Switch
-      vm.currentSkin = 'blue';
-      vm.skinList = [
-        'lightblue',
-        'bluegray',
-        'cyan',
-        'teal',
-        'green',
-        'orange',
-        'blue',
-        'purple'
-      ];
-    }
-
-    function switchSkin(color) {
-      vm.currentSkin = color;
     }
 
   }

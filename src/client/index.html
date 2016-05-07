@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!--[if IE 9 ]>
-<html class="ie9"  ng-app="app" data-ng-controller="AppController as vm"><![endif]-->
+<html class="ie9"  ng-app="app" data-ng-controller="AppController as appVM"><![endif]-->
 <![if IE 9 ]>
-<html ng-app="app" data-ng-controller="AppController as vm"><![endif]-->
+<html ng-app="app" data-ng-controller="AppController as appVM"><![endif]-->
 
 <head>
   <style>
@@ -51,7 +51,7 @@
   <!-- endbuild -->
 </head>
 
-<body data-ng-class="{ 'sw-toggled': vm.layoutType === '1'}">
+<body data-ng-class="{ 'sw-toggled': appVM.layoutType === '1'}">
 <data ui-view></data>
 
 <!-- Older IE warning message -->
@@ -129,8 +129,8 @@
 <script src="/bower_components/flot.tooltip/js/jquery.flot.tooltip.js"></script>
 <script src="/bower_components/fullcalendar/dist/fullcalendar.js"></script>
 <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-<script src="/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
 <script src="/bower_components/requirejs/require.js"></script>
+<script src="/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
 <script src="/bower_components/lightgallery/dist/js/lightgallery.min.js"></script>
 <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
 <script src="/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
@@ -180,6 +180,7 @@
 <script src="/src/client/app/core/constants.js"></script>
 <script src="/src/client/app/core/core.route.js"></script>
 <script src="/src/client/app/core/dataservice.js"></script>
+<script src="/src/client/app/core/stop-propagate.directive.js"></script>
 <script src="/src/client/app/dashboard/best-selling.controller.js"></script>
 <script src="/src/client/app/dashboard/best-selling.service.js"></script>
 <script src="/src/client/app/dashboard/dashboard.controller.js"></script>
@@ -192,11 +193,14 @@
 <script src="/src/client/app/dashboard/todo.service.js"></script>
 <script src="/src/client/app/headers/header.controller.js"></script>
 <script src="/src/client/app/headers/headers.route.js"></script>
+<script src="/src/client/app/layout/change-layout.directive.js"></script>
 <script src="/src/client/app/layout/growl-service.js"></script>
 <script src="/src/client/app/layout/ht-sidebar.directive.js"></script>
 <script src="/src/client/app/layout/ht-top-nav.directive.js"></script>
 <script src="/src/client/app/layout/shell.controller.js"></script>
 <script src="/src/client/app/layout/sidebar.controller.js"></script>
+<script src="/src/client/app/layout/toggle-sidebar.directive.js"></script>
+<script src="/src/client/app/layout/toggle-submenu.directive.js"></script>
 <script src="/src/client/app/widgets/ht-img-person.directive.js"></script>
 <script src="/src/client/app/widgets/ht-widget-header.directive.js"></script>
 <!-- endinject -->
