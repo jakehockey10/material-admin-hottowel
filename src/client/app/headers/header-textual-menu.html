@@ -7,13 +7,13 @@
         </div>
     </li>
 
-    <li class="hidden-xs">
-        <a href="index.html" class="m-l-10" data-ng-click="vm.sidebarStat($event)"><img src="img/demo/logo.png" alt=""></a>
+    <li class="logo hidden-xs">
+        <a data-ui-sref="home" data-ng-click="vm.sidebarStat($event)">Material Admin</a>
     </li>
 
     <li class="pull-right">
         <ul class="top-menu">
-            <li id="top-search" data-ng-click="hctrl.openSearch()">
+            <li id="top-search" data-ng-click="vm.openSearch()">
                 <a href=""><span class="tm-label">Search</span></a>
             </li>
 
@@ -180,7 +180,7 @@
 <!-- Top Search Content -->
 <div id="top-search-wrap">
     <div class="tsw-inner">
-        <i id="top-search-close" data-ng-click="hctrl.closeSearch()" class="zmdi zmdi-arrow-left"></i>
+        <i id="top-search-close" data-ng-click="vm.closeSearch()" class="zmdi zmdi-arrow-left"></i>
         <input type="text">
     </div>
 </div>

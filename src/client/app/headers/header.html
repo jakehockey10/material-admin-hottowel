@@ -22,7 +22,7 @@
             </li>
 
             <li id="top-search">
-                <a href="" data-ng-click="hctrl.openSearch()"><i class="tm-icon zmdi zmdi-search"></i></a>
+                <a href="" data-ng-click="vm.openSearch()"><i class="tm-icon zmdi zmdi-search"></i></a>
             </li>
             <li class="dropdown" uib-dropdown>
                 <a uib-dropdown-toggle href="">
@@ -35,7 +35,7 @@
                             Messages
                         </div>
                         <div class="lv-body">
-                            <a class="lv-item" ng-href="" ng-repeat="w in hctrl.messageResult.list">
+                            <a class="lv-item" ng-href="" ng-repeat="w in vm.messageResult.list">
                                 <div class="media">
                                     <div class="pull-left">
                                         <img class="lv-img-sm" ng-src="img/profile-pics/{{ w.img }}" alt="">
@@ -66,14 +66,14 @@
 
                             <ul class="actions">
                                 <li>
-                                    <a href="" data-ng-click="hctrl.clearNotification($event)">
+                                    <a href="" data-ng-click="vm.clearNotification($event)">
                                         <i class="zmdi zmdi-check-all"></i>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="lv-body">
-                            <a class="lv-item" ng-href="" ng-repeat="w in hctrl.messageResult.list">
+                            <a class="lv-item" ng-href="" ng-repeat="w in vm.messageResult.list">
                                 <div class="media">
                                     <div class="pull-left">
                                         <img class="lv-img-sm" ng-src="img/profile-pics/{{ w.img }}" alt="">
@@ -167,10 +167,10 @@
                     </li>
                     <li class="divider hidden-xs"></li>
                     <li class="hidden-xs">
-                        <a data-ng-click="hctrl.fullScreen()" href=""><i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen</a>
+                        <a data-ng-click="vm.fullScreen()" href=""><i class="zmdi zmdi-fullscreen"></i> Toggle Fullscreen</a>
                     </li>
                     <li>
-                        <a data-ng-click="hctrl.clearLocalStorage()" href=""><i class="zmdi zmdi-delete"></i> Clear Local Storage</a>
+                        <a data-ng-click="vm.clearLocalStorage()" href=""><i class="zmdi zmdi-delete"></i> Clear Local Storage</a>
                     </li>
                     <li>
                         <a href=""><i class="zmdi zmdi-face"></i> Privacy Settings</a>
@@ -190,7 +190,7 @@
 <!-- Top Search Content -->
 <div id="top-search-wrap">
     <div class="tsw-inner">
-        <i id="top-search-close" class="zmdi zmdi-arrow-left" data-ng-click="hctrl.closeSearch()"></i>
+        <i id="top-search-close" class="zmdi zmdi-arrow-left" data-ng-click="vm.closeSearch()"></i>
         <input type="text">
     </div>
 </div>

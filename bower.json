@@ -69,6 +69,16 @@
         "dist/css/bootstrap.css",
         "dist/js/bootstrap.js"
       ]
+    },
+    "overrides": {
+      "jquery.easy-pie-chart": {
+        "dependencies": {
+          "jquery": ">=1.9.0"
+        },
+        "main": [
+          "dist/js/angular.easypiechart.min.js"
+        ]
+      }
     }
   }
 }

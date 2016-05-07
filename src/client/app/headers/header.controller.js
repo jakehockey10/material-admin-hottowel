@@ -2,10 +2,10 @@
   'use strict';
 
   angular
-    .module('app.layout')
+    .module('app.headers')
     .controller('HeaderController', HeaderController);
 
-  HeaderController.$inject = ['$timeout, MessagesService'];
+  HeaderController.$inject = ['$timeout', 'MessagesService'];
 
   /* @ngInject */
   function HeaderController($timeout, MessagesService) {
@@ -26,16 +26,14 @@
 
     ////////////////
 
-    this.openSearch = function(){
+    function openSearch (){
       angular.element('#header').addClass('search-toggled');
       angular.element('#top-search-wrap').find('input').focus();
-    };
-
-    this.closeSearch = function(){
+    }
+    function closeSearch (){
       angular.element('#header').removeClass('search-toggled');
-    };
-
-    this.clearNotification = function($event) {
+    }
+    function clearNotification ($event) {
       $event.preventDefault();
 
       var x = angular.element($event.target).closest('.listview');
@@ -60,9 +58,8 @@
       $timeout(function(){
         angular.element('#notifications').addClass('empty');
       }, (z*150)+200);
-    };
-
-    this.clearLocalStorage = function() {
+    }
+    function clearLocalStorage () {
 
       //Get confirmation, if confirmed clear the localStorage
       swal({
@@ -78,9 +75,8 @@
         swal('Done!', 'localStorage is cleared', 'success');
       });
 
-    };
-
-    this.fullScreen = function() {
+    }
+    function fullScreen () {
       //Launch
       function launchIntoFullscreen(element) {
         if(element.requestFullscreen) {
@@ -111,7 +107,7 @@
       else {
         launchIntoFullscreen(document.documentElement);
       }
-    };
+    }
   }
 
 })();
