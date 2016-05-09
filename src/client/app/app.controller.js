@@ -12,6 +12,9 @@
     var vm = this;
     vm.title = 'AppController';
 
+    // Close sidebar on click
+    vm.sidebarState = sidebarState;
+
     activate();
 
     ////////////////
@@ -24,6 +27,7 @@
       vm.$state = $state;
       initializeListView();
       initializeBlog();
+      initializeSidebarToggle();
     }
 
     function welcomeMessage() {
@@ -61,6 +65,21 @@
       vm.wallImage = false;
       vm.wallVideo = false;
       vm.wallLink = false;
+    }
+
+    function initializeSidebarToggle() {
+      // By default Sidebars are hidden in boxed layout and
+      // in wide layout only the right sidebar is hidden.
+      vm.sidebarToggle = {
+        left: false,
+        right: false
+      };
+    }
+
+    function sidebarState(event) {
+      if (!angular.element(event.target).parent().hasClass('active')) {
+        vm.sidebarToggle.left = false;
+      }
     }
 
   }

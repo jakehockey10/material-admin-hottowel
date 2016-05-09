@@ -3,12 +3,12 @@
 
   angular
     .module('app.layout')
-    .directive('toggleSidebarDirective', toggleSidebarDirective);
+    .directive('toggleSidebar', toggleSidebar);
 
-  // toggleSidebarDirective.$inject = ['dependency'];
+  // toggleSidebar.$inject = ['dependency'];
 
   /* @ngInject */
-  function toggleSidebarDirective(/*dependency*/) {
+  function toggleSidebar(/*dependency*/) {
     var directive = {
       link: link,
       restrict: 'A',

@@ -1,9 +1,9 @@
 <header id="header" data-current-skin={{headerVM.currentSkin}} data-ng-include src="'app/headers/header-image-logo.html'" data-ng-controller="HeaderController as headerVM"></header>
 
 <section id="main">
-    <aside id="sidebar" data-ng-include src="'app/layout/sidebar-left.html'" data-ng-class="{ 'toggled': sidebarVM.sidebarToggle.left === true }"></aside>
+    <aside id="sidebar" data-ng-include src="'app/layout/sidebar-left.html'" data-ng-class="{ 'toggled': appVM.sidebarToggle.left === true }"></aside>
 
-    <aside id="chat" data-ng-include src="'app/dashboard/chat.html'" data-ng-class="{ 'toggled': sidebarVM.sidebarToggle.right === true }"></aside>
+    <aside id="chat" data-ng-include src="'app/dashboard/chat.html'" data-ng-class="{ 'toggled': appVM.sidebarToggle.right === true }"></aside>
 
     <section id="content">
         <div class="container c-alt">

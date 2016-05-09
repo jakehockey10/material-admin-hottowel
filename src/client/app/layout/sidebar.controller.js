@@ -5,37 +5,18 @@
     .module('app.layout')
     .controller('SidebarController', SidebarController);
 
-  SidebarController.$inject = ['dependency'];
+  // SidebarController.$inject = ['dependency'];
 
   /* @ngInject */
-  function SidebarController(dependency) {
+  function SidebarController(/*dependency*/) {
     var vm = this;
     vm.title = 'SidebarController';
-
-    // Close sidebar on click
-    vm.sidebarState = sidebarState;
 
     activate();
 
     ////////////////
 
     function activate() {
-      initializeSidebarToggle();
-    }
-
-    function initializeSidebarToggle() {
-      // By default Sidebars are hidden in boxed layout and
-      // in wide layout only the right sidebar is hidden.
-      vm.sidebarToggle = {
-        left: false,
-        right: false
-      };
-    }
-
-    function sidebarState(event) {
-      if (!angular.element(event.target).parent().hasClass('active')) {
-        vm.sidebarToggle.left = false;
-      }
     }
 
   }

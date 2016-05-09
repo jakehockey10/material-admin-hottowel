@@ -1,5 +1,5 @@
 <ul class="header-inner clearfix">
-    <li id="menu-trigger" data-target="mainmenu" data-toggle-sidebar data-model-left="sidebarVM.sidebarToggle.left" data-ng-class="{ 'open': sidebarVM.sidebarToggle.left === true }">
+    <li id="menu-trigger" data-target="mainmenu" data-toggle-sidebar data-model-left="appVM.sidebarToggle.left" data-ng-class="{ 'open': appVM.sidebarToggle.left === true }">
         <div class="line-wrap">
             <div class="line top"></div>
             <div class="line center"></div>
@@ -8,7 +8,7 @@
     </li>
 
     <li class="logo hidden-xs">
-        <a data-ui-sref="dashboard" data-ng-click="sidebarVM.sidebarState($event)">Material Admin</a>
+        <a data-ui-sref="dashboard" data-ng-click="appVM.sidebarState($event)">Material Admin</a>
     </li>
 
     <li class="pull-right">
@@ -16,7 +16,7 @@
 
             <li id="toggle-width">
                 <div class="toggle-switch">
-                    <input id="tw-switch" type="checkbox" hidden="hidden" data-change-layout="vm.layoutType">
+                    <input id="tw-switch" type="checkbox" hidden="hidden" data-change-layout="appVM.layoutType">
                     <label for="tw-switch" class="ts-helper"></label>
                 </div>
             </li>
@@ -180,7 +180,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="hidden-xs" data-target="chat" data-toggle-sidebar data-model-right="sidebarVM.sidebarToggle.right" data-ng-class="{ 'open': sidebarVM.sidebarToggle.right === true }">
+            <li class="hidden-xs" data-target="chat" data-toggle-sidebar data-model-right="appVM.sidebarToggle.right" data-ng-class="{ 'open': appVM.sidebarToggle.right === true }">
                 <a href=""><i class="tm-icon zmdi zmdi-comment-alt-text"></i></a>
             </li>
         </ul>

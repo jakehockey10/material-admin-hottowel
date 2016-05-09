@@ -1,16 +1,19 @@
-<header id="header" data-current-skin={{headerVM.currentSkin}} data-ng-include="'app/headers/header.html'" data-ng-controller="HeaderController as headerVM"></header>
+<header id="header" data-current-skin={{headerVM.currentSkin}} data-ng-include="'app/headers/header.html'"
+        data-ng-controller="HeaderController as headerVM"></header>
 
 <section id="main">
-  <aside id="sidebar" data-ng-include="'app/layout/sidebar-left.html'" data-ng-class="{ 'toggled': sidebarVM.sidebarToggle.left === true }"></aside>
+  <aside id="sidebar" data-ng-include="'app/layout/sidebar-left.html'"
+         data-ng-class="{ 'toggled': appVM.sidebarToggle.left === true }"></aside>
 
-  <aside id="chat" data-ng-include="'app/dashboard/chat.html'" data-ng-class="{ 'toggled': sidebarVM.sidebarToggle.right === true }"></aside>
+  <aside id="chat" data-ng-include="'app/dashboard/chat.html'"
+         data-ng-class="{ 'toggled': appVM.sidebarToggle.right === true }"></aside>
 
   <section id="content">
 
     <div class="container">
       <div class="block-header">
         <h2>Dashboard</h2>
-
+        Left: {{appVM.sidebarToggle.left}} | Right: {{appVM.sidebarToggle.right}}
         <ul class="actions">
           <li>
             <a href="">
@@ -45,7 +48,9 @@
 
       <div class="card">
         <div class="card-header">
-          <h2>Sales Statistics <small>Vestibulum purus quam scelerisque, mollis nonummy metus</small></h2>
+          <h2>Sales Statistics
+            <small>Vestibulum purus quam scelerisque, mollis nonummy metus</small>
+          </h2>
 
           <ul class="actions">
             <li>
@@ -264,7 +269,9 @@
           <!-- Recent Items -->
           <div class="card" data-ng-controller="RecentItemController as recentItemVM">
             <div class="card-header">
-              <h2>Recent Items <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
+              <h2>Recent Items
+                <small>Phasellus condimentum ipsum id auctor imperdie</small>
+              </h2>
               <ul class="actions">
                 <li class="dropdown" uib-dropdown>
                   <a href="" uib-dropdown-toggle>
@@ -337,15 +344,18 @@
             <div class="clearfix"></div>
 
             <div class="tl-body">
-              <div id="add-tl-item" data-ng-class="{ 'toggled': todoVM.addTodoStat }" data-ng-click="todoVM.addTodoStat = true">
+              <div id="add-tl-item" data-ng-class="{ 'toggled': todoVM.addTodoStat }"
+                   data-ng-click="todoVM.addTodoStat = true">
                 <i class="add-new-item zmdi zmdi-plus" data-ng-click="todoVM.addTodo($event)"></i>
 
                 <div class="add-tl-body">
                   <textarea placeholder="What you want to do..." data-ng-model="vm.todo"></textarea>
 
                   <div class="add-tl-actions">
-                    <a class="zmdi zmdi-close" data-tl-action="dismiss" data-ng-click="todoVM.addTodoStat = false; $event.stopPropagation()"></a>
-                    <a class="zmdi zmdi-check" data-tl-action="save" data-ng-click="todoVM.addTodoStat = false; $event.stopPropagation()"></a>
+                    <a class="zmdi zmdi-close" data-tl-action="dismiss"
+                       data-ng-click="todoVM.addTodoStat = false; $event.stopPropagation()"></a>
+                    <a class="zmdi zmdi-check" data-tl-action="save"
+                       data-ng-click="todoVM.addTodoStat = false; $event.stopPropagation()"></a>
                   </div>
                 </div>
               </div>
@@ -386,7 +396,9 @@
           <!-- Recent Posts -->
           <div class="card" data-ng-controller="RecentPostController as recentPostVM">
             <div class="card-header ch-alt m-b-20">
-              <h2>Recent Posts <small>Phasellus condimentum ipsum id auctor imperdie</small></h2>
+              <h2>Recent Posts
+                <small>Phasellus condimentum ipsum id auctor imperdie</small>
+              </h2>
               <ul class="actions">
                 <li>
                   <a href="">

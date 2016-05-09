@@ -257,10 +257,10 @@
 <nav class="ha-menu">
     <ul>
         <li class="waves-effect" data-ui-sref-active="active">
-            <a data-ui-sref="home" data-ng-click="sidebarVM.sidebarState($event)">Home</a>
+            <a data-ui-sref="home" data-ng-click="appVM.sidebarState($event)">Home</a>
         </li>
 
-        <li class="dropdown" uib-dropdown data-ng-class="{ 'active': sidebarVM.$state.includes('headers') }">
+        <li class="dropdown" uib-dropdown data-ng-class="{ 'active': appVM.$state.includes('headers') }">
             <div class="waves-effect" uib-dropdown-toggle>Headers</div>
 
             <ul class="dropdown-menu">

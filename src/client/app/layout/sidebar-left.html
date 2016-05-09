@@ -2,7 +2,7 @@
     <div class="profile-menu">
         <a href="" toggle-submenu>
             <div class="profile-pic">
-                <img src="img/profile-pics/1.jpg" alt="">
+                <img src="../../images/profile-pics/1.jpg" alt="">
             </div>
 
             <div class="profile-info">
@@ -14,7 +14,7 @@
 
         <ul class="main-menu">
             <li>
-                <a data-ui-sref="pages.profile.profile-about" data-ng-click="sdebarVM.sidebarState($event)"><i class="zmdi zmdi-account"></i> View Profile</a>
+                <a data-ui-sref="pages.profile.profile-about" data-ng-click="appVM.sidebarState($event)"><i class="zmdi zmdi-account"></i> View Profile</a>
             </li>
             <li>
                 <a href=""><i class="zmdi zmdi-input-antenna"></i> Privacy Settings</a>
@@ -31,26 +31,26 @@
     <ul class="main-menu">
 
         <li data-ui-sref-active="active">
-            <a data-ui-sref="home" data-ng-click="sdebarVM.sidebarState($event)"><i class="zmdi zmdi-home"></i> Home</a>
+            <a data-ui-sref="home" data-ng-click="appVM.sidebarState($event)"><i class="zmdi zmdi-home"></i> Home</a>
         </li>
         <li class="sub-menu" data-ng-class="{ 'active toggled': vm.$state.includes('headers') }">
             <a href="" toggle-submenu><i class="zmdi zmdi-view-compact"></i> Headers</a>
 
             <ul>
-                <li><a data-ui-sref-active="active" data-ui-sref="headers.textual-menu" data-ng-click="sdebarVM.sidebarState($event)">Textual menu</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="headers.image-logo" data-ng-click="sdebarVM.sidebarState($event)">Image logo</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="headers.mainmenu-on-top" data-ng-click="sdebarVM.sidebarState($event)">Mainmenu on top</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="headers.textual-menu" data-ng-click="appVM.sidebarState($event)">Textual menu</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="headers.image-logo" data-ng-click="appVM.sidebarState($event)">Image logo</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="headers.mainmenu-on-top" data-ng-click="appVM.sidebarState($event)">Mainmenu on top</a></li>
             </ul>
         </li>
         <li data-ui-sref-active="active">
-            <a data-ui-sref="typography" data-ng-click="sdebarVM.sidebarState($event)"><i class="zmdi zmdi-format-underlined"></i> Typography</a>
+            <a data-ui-sref="typography" data-ng-click="appVM.sidebarState($event)"><i class="zmdi zmdi-format-underlined"></i> Typography</a>
         </li>
         <li class="sub-menu" data-ng-class="{ 'active toggled': vm.$state.includes('widgets') }">
             <a href="" toggle-submenu><i class="zmdi zmdi-widgets"></i> Widgets</a>
 
             <ul>
-                <li><a data-ui-sref-active="active" data-ui-sref="widgets.widget-templates" data-ng-click="sdebarVM.sidebarState($event)">Templates</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="widgets.widgets" data-ng-click="sdebarVM.sidebarState($event)">Widgets</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="widgets.widget-templates" data-ng-click="appVM.sidebarState($event)">Templates</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="widgets.widgets" data-ng-click="appVM.sidebarState($event)">Widgets</a></li>
             </ul>
         </li>
 
@@ -58,8 +58,8 @@
             <a href="" toggle-submenu><i class="zmdi zmdi-view-list"></i> Tables</a>
 
             <ul>
-                <li><a data-ui-sref-active="active" data-ui-sref="tables.tables" data-ng-click="sdebarVM.sidebarState($event)">Tables</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="tables.data-table" data-ng-click="sdebarVM.sidebarState($event)">Data Tables</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="tables.tables" data-ng-click="appVM.sidebarState($event)">Tables</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="tables.data-table" data-ng-click="appVM.sidebarState($event)">Data Tables</a></li>
             </ul>
         </li>
 
@@ -67,64 +67,64 @@
             <a href="" toggle-submenu><i class="zmdi zmdi-collection-text"></i> Forms</a>
 
             <ul>
-                <li><a data-ui-sref-active="active" data-ui-sref="form.basic-form-elements" data-ng-click="sdebarVM.sidebarState($event)">Basic Form Elements</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="form.form-components" data-ng-click="sdebarVM.sidebarState($event)">Form Components</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="form.form-examples" data-ng-click="sdebarVM.sidebarState($event)">Form Examples</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="form.form-validations" data-ng-click="sdebarVM.sidebarState($event)">Form Validation</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="form.basic-form-elements" data-ng-click="appVM.sidebarState($event)">Basic Form Elements</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="form.form-components" data-ng-click="appVM.sidebarState($event)">Form Components</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="form.form-examples" data-ng-click="appVM.sidebarState($event)">Form Examples</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="form.form-validations" data-ng-click="appVM.sidebarState($event)">Form Validation</a></li>
             </ul>
         </li>
 
         <li class="sub-menu" data-ng-class="{ 'active toggled': vm.$state.includes('user-interface') }">
             <a href="" toggle-submenu><i class="zmdi zmdi-swap-alt"></i>User Interface</a>
             <ul>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.ui-bootstrap" data-ng-click="sdebarVM.sidebarState($event)">UI Bootstrap</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.colors" data-ng-click="sdebarVM.sidebarState($event)">Colors</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.animations" data-ng-click="sdebarVM.sidebarState($event)">Animations</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.box-shadow" data-ng-click="sdebarVM.sidebarState($event)">Box Shadow</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.buttons" data-ng-click="sdebarVM.sidebarState($event)">Buttons</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.icons" data-ng-click="sdebarVM.sidebarState($event)">Icons</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.alerts" data-ng-click="sdebarVM.sidebarState($event)">Alerts</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.preloaders" data-ng-click="sdebarVM.sidebarState($event)">Preloaders</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.notifications-dialogs" data-ng-click="sdebarVM.sidebarState($event)">Notifications & Dialogs</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.media" data-ng-click="sdebarVM.sidebarState($event)">Media</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.other-components" data-ng-click="sdebarVM.sidebarState($event)">Others</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.ui-bootstrap" data-ng-click="appVM.sidebarState($event)">UI Bootstrap</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.colors" data-ng-click="appVM.sidebarState($event)">Colors</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.animations" data-ng-click="appVM.sidebarState($event)">Animations</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.box-shadow" data-ng-click="appVM.sidebarState($event)">Box Shadow</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.buttons" data-ng-click="appVM.sidebarState($event)">Buttons</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.icons" data-ng-click="appVM.sidebarState($event)">Icons</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.alerts" data-ng-click="appVM.sidebarState($event)">Alerts</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.preloaders" data-ng-click="appVM.sidebarState($event)">Preloaders</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.notifications-dialogs" data-ng-click="appVM.sidebarState($event)">Notifications & Dialogs</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.media" data-ng-click="appVM.sidebarState($event)">Media</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="user-interface.other-components" data-ng-click="appVM.sidebarState($event)">Others</a></li>
             </ul>
         </li>
         <li class="sub-menu" data-ng-class="{ 'active toggled': vm.$state.includes('charts') }">
             <a href="" toggle-submenu><i class="zmdi zmdi-trending-up"></i>Charts</a>
             <ul>
-                <li><a data-ui-sref-active="active" data-ui-sref="charts.flot-charts" data-ng-click="sdebarVM.sidebarState($event)">Flot Charts</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="charts.other-charts" data-ng-click="sdebarVM.sidebarState($event)">Other Charts</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="charts.flot-charts" data-ng-click="appVM.sidebarState($event)">Flot Charts</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="charts.other-charts" data-ng-click="appVM.sidebarState($event)">Other Charts</a></li>
             </ul>
         </li>
 
         <li data-ui-sref-active="active">
-            <a data-ui-sref="calendar" data-ng-click="sdebarVM.sidebarState($event)"><i class="zmdi zmdi-calendar"></i> Calendar</a>
+            <a data-ui-sref="calendar" data-ng-click="appVM.sidebarState($event)"><i class="zmdi zmdi-calendar"></i> Calendar</a>
         </li>
 
         <li class="sub-menu" data-ng-class="{ 'active toggled': vm.$state.includes('photo-gallery') }">
             <a href="" toggle-submenu><i class="zmdi zmdi-image"></i>Photo Gallery</a>
             <ul>
-                <li><a data-ui-sref-active="active" data-ui-sref="photo-gallery.photos" data-ng-click="sdebarVM.sidebarState($event)">Default</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="photo-gallery.timeline" data-ng-click="sdebarVM.sidebarState($event)">Timeline</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="photo-gallery.photos" data-ng-click="appVM.sidebarState($event)">Default</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="photo-gallery.timeline" data-ng-click="appVM.sidebarState($event)">Timeline</a></li>
             </ul>
         </li>
 
 
         <li data-ui-sref-active="active">
-            <a data-ui-sref="generic-classes" data-ng-click="sdebarVM.sidebarState($event)"><i class="zmdi zmdi-layers"></i> Generic Classes</a>
+            <a data-ui-sref="generic-classes" data-ng-click="appVM.sidebarState($event)"><i class="zmdi zmdi-layers"></i> Generic Classes</a>
         </li>
 
         <li class="sub-menu" data-ng-class="{ 'active toggled': vm.$state.includes('pages') }">
             <a href="" toggle-submenu><i class="zmdi zmdi-collection-item"></i> Sample Pages</a>
             <ul>
-                <li><a data-ui-sref-active="active" data-ui-sref="pages.profile.profile-about" data-ng-click="sdebarVM.sidebarState($event)">Profile</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="pages.listview" data-ng-click="sdebarVM.sidebarState($event)">List View</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="pages.messages" data-ng-click="sdebarVM.sidebarState($event)">Messages</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="pages.pricing-table" data-ng-click="sdebarVM.sidebarState($event)">Pricing Table</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="pages.contacts" data-ng-click="sdebarVM.sidebarState($event)">Contacts</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="pages.invoice" data-ng-click="sdebarVM.sidebarState($event)">Invoice</a></li>
-                <li><a data-ui-sref-active="active" data-ui-sref="pages.wall" data-ng-click="sdebarVM.sidebarState($event)">Wall</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="pages.profile.profile-about" data-ng-click="appVM.sidebarState($event)">Profile</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="pages.listview" data-ng-click="appVM.sidebarState($event)">List View</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="pages.messages" data-ng-click="appVM.sidebarState($event)">Messages</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="pages.pricing-table" data-ng-click="appVM.sidebarState($event)">Pricing Table</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="pages.contacts" data-ng-click="appVM.sidebarState($event)">Contacts</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="pages.invoice" data-ng-click="appVM.sidebarState($event)">Invoice</a></li>
+                <li><a data-ui-sref-active="active" data-ui-sref="pages.wall" data-ng-click="appVM.sidebarState($event)">Wall</a></li>
                 <li><a href="login.html">Login and Sign Up</a></li>
                 <li><a href="lockscreen.html">Lockscreen</a></li>
                 <li><a href="404.html">Error 404</a></li>
