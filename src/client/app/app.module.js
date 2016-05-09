@@ -7,6 +7,8 @@
     'app.admin',
     'app.dashboard',
     'app.layout',
+    'app.typography',
+    'app.tables',
     'ngAnimate',
     'ngResource',
     'ui.router',
@@ -14,7 +16,6 @@
     'angular-loading-bar',
     'oc.lazyLoad',
     'ya.nouislider'
-    // 'ngTable'
   ]);
 
 })();

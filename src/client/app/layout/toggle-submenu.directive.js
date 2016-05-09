@@ -3,12 +3,12 @@
 
   angular
     .module('app.layout')
-    .directive('toggleSubmenuDirective', toggleSubmenuDirective);
+    .directive('toggleSubmenu', toggleSubmenu);
 
-  // toggleSubmenuDirective.$inject = ['dependency'];
+  // toggleSubmenu.$inject = ['dependency'];
 
   /* @ngInject */
-  function toggleSubmenuDirective(/*dependency*/) {
+  function toggleSubmenu(/*dependency*/) {
     var directive = {
       link: link,
       restrict: 'A',

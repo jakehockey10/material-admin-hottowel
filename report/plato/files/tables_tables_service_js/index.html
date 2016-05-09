@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Plato - tables/tables.service.js</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link href="../../assets/css/vendor/morris.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/bootstrap.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/font-awesome.css" rel="stylesheet">
+  <link href="../../assets/css/vendor/codemirror.css" rel="stylesheet">
+  <link href="../../assets/css/plato.css" rel="stylesheet">
+  <link href="../../assets/css/plato-file.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="http://github.com/es-analysis/plato">Plato on Github</a>
+    <ul class="nav navbar-nav">
+      <li>
+        <a href="../../index.html">Report Home</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>tables/tables.service.js</h1>
+  </div>
+</div>
+
+<div class="container aggregate-stats">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Maintainability <a href="http://blogs.msdn.com/b/codeanalysis/archive/2007/11/20/maintainability-index-range-and-meaning.aspx"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="A value between 0 and 100 that represents the relative ease of maintaining the code. A high value means better maintainability." data-original-title="Maintainability Index"  data-container="body"></i></a></h2>
+      <p class="stat">45.10</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Lines of code <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h2>
+      <p class="stat">160</p>
+    </div>
+  </div>
+  <div class="row historical">
+    <div class="col-md-6">
+      <p id="chart_historical_maint" class="chart"></p>
+    </div>
+    <div class="col-md-6">
+      <p id="chart_historical_sloc" class="chart"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="header">Difficulty  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="The difficulty measure is related to the difficulty of the program to write or understand." data-original-title="Difficulty" data-container="body"></i></a></h2>
+      <p class="stat">7.19</p>
+    </div>
+    <div class="col-md-6">
+      <h2 class="header">Estimated Errors  <a href="http://en.wikipedia.org/wiki/Halstead_complexity_measures"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Halstead's delivered bugs is an estimate for the number of errors in the implementation." data-original-title="Delivered Bugs" data-container="body"></i></a></h2>
+      <p class="stat">0.83</p>
+    </div>
+  </div>
+</div>
+
+<div class="container charts">
+  <div class="row">
+    <h2 class="header">Function weight</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h3 class="chart-header">By Complexity <a href="http://en.wikipedia.org/wiki/Cyclomatic_complexity"><i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="This metric counts the number of distinct paths through a block of code. Lower values are better." data-original-title="Cyclomatic Complexity" data-container="body"></i></a></h3>
+      <div id="fn-by-complexity" class="stat"></div>
+    </div>
+    <div class="col-md-6">
+      <h3 class="chart-header">By SLOC  <i class="icon icon-info-sign" rel="popover" data-placement="top" data-trigger="hover" data-content="Source Lines of Code / Logical Lines of Code" data-original-title="SLOC/LSLOC" data-container="body"></i></h3>
+      <div id="fn-by-sloc" class="stat"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <textarea id="file-source" class="col-md-12">(function () {
+  &#039;use strict&#039;;
+
+  angular
+    .module(&#039;app.tables&#039;)
+    .service(&#039;TablesService&#039;, TablesService);
+
+  // TablesService.$inject = [&#039;dependency&#039;];
+
+  /* @ngInject */
+  function TablesService(/*dependency*/) {
+    this.data = [
+      {
+        &quot;id&quot;: 10238,
+        &quot;name&quot;: &quot;Marc Barnes&quot;,
+        &quot;email&quot;: &quot;marc.barnes54@example.com&quot;,
+        &quot;username&quot;: &quot;MarcBarnes&quot;,
+        &quot;contact&quot;: &quot;(382)-122-5003&quot;
+      },
+      {
+        &quot;id&quot;: 10243,
+        &quot;name&quot;: &quot;Glen Curtis&quot;,
+        &quot;email&quot;: &quot;glen.curtis11@example.com&quot;,
+        &quot;username&quot;: &quot;GlenCurtis&quot;,
+        &quot;contact&quot;: &quot;(477)-981-4948&quot;
+      },
+      {
+        &quot;id&quot;: 10248,
+        &quot;name&quot;: &quot;Beverly Gonzalez&quot;,
+        &quot;email&quot;: &quot;beverly.gonzalez54@example.com&quot;,
+        &quot;username&quot;: &quot;BeverlyGonzalez&quot;,
+        &quot;contact&quot;: &quot;(832)-255-5161&quot;
+      },
+      {
+        &quot;id&quot;: 10253,
+        &quot;name&quot;: &quot;Yvonne Chavez&quot;,
+        &quot;email&quot;: &quot;yvonne.chavez@example.com&quot;,
+        &quot;username&quot;: &quot;YvonneChavez&quot;,
+        &quot;contact&quot;: &quot;(477)-446-3715&quot;
+      },
+      {
+        &quot;id&quot;: 10234,
+        &quot;name&quot;: &quot;Melinda Mitchelle&quot;,
+        &quot;email&quot;: &quot;melinda@example.com&quot;,
+        &quot;username&quot;: &quot;MelindaMitchelle&quot;,
+        &quot;contact&quot;: &quot;(813)-716-4996&quot;
+
+      },
+      {
+        &quot;id&quot;: 10239,
+        &quot;name&quot;: &quot;Shannon Bradley&quot;,
+        &quot;email&quot;: &quot;shannon.bradley42@example.com&quot;,
+        &quot;username&quot;: &quot;ShannonBradley&quot;,
+        &quot;contact&quot;: &quot;(774)-291-9928&quot;
+      },
+      {
+        &quot;id&quot;: 10244,
+        &quot;name&quot;: &quot;Virgil Kim&quot;,
+        &quot;email&quot;: &quot;virgil.kim81@example.com&quot;,
+        &quot;username&quot;: &quot;VirgilKim&quot;,
+        &quot;contact&quot;: &quot;(219)-181-7898&quot;
+      },
+      {
+        &quot;id&quot;: 10249,
+        &quot;name&quot;: &quot;Letitia Robertson&quot;,
+        &quot;email&quot;: &quot;letitia.rober@example.com&quot;,
+        &quot;username&quot;: &quot;Letitia Robertson&quot;,
+        &quot;contact&quot;: &quot;(647)-209-4589&quot;
+      },
+      {
+        &quot;id&quot;: 10237,
+        &quot;name&quot;: &quot;Claude King&quot;,
+        &quot;email&quot;: &quot;claude.king22@example.com&quot;,
+        &quot;username&quot;: &quot;ClaudeKing&quot;,
+        &quot;contact&quot;: &quot;(657)-988-8701&quot;
+      },
+      {
+        &quot;id&quot;: 10242,
+        &quot;name&quot;: &quot;Roland Craig&quot;,
+        &quot;email&quot;: &quot;roland.craig47@example.com&quot;,
+        &quot;username&quot;: &quot;RolandCraig&quot;,
+        &quot;contact&quot;: &quot;(932)-935-9471&quot;
+      },
+      {
+        &quot;id&quot;: 10247,
+        &quot;name&quot;: &quot;Colleen Parker&quot;,
+        &quot;email&quot;: &quot;colleen.parker38@example.com&quot;,
+        &quot;username&quot;: &quot;ColleenParker&quot;,
+        &quot;contact&quot;: &quot;(857)-459-2792&quot;
+      },
+      {
+        &quot;id&quot;: 10252,
+        &quot;name&quot;: &quot;Leah Jensen&quot;,
+        &quot;email&quot;: &quot;leah.jensen27@example.com&quot;,
+        &quot;username&quot;: &quot;LeahJensen&quot;,
+        &quot;contact&quot;: &quot;(861)-275-4686&quot;
+      },
+      {
+        &quot;id&quot;: 10236,
+        &quot;name&quot;: &quot;Harold Martinez&quot;,
+        &quot;email&quot;: &quot;martinez67@example.com&quot;,
+        &quot;username&quot;: &quot;HaroldMartinez&quot;,
+        &quot;contact&quot;: &quot;(836)-634-9133&quot;
+      },
+      {
+        &quot;id&quot;: 10241,
+        &quot;name&quot;: &quot;Keith Lowe&quot;,
+        &quot;email&quot;: &quot;keith.lowe96@example.com&quot;,
+        &quot;username&quot;: &quot;KeithLowe&quot;,
+        &quot;contact&quot;: &quot;(778)-787-3100&quot;
+      },
+      {
+        &quot;id&quot;: 10246,
+        &quot;name&quot;: &quot;Charles Walker&quot;,
+        &quot;email&quot;: &quot;charles.walker90@example.com&quot;,
+        &quot;username&quot;: &quot;CharlesWalker&quot;,
+        &quot;contact&quot;: &quot;(486)-440-4716&quot;
+      },
+      {
+        &quot;id&quot;: 10251,
+        &quot;name&quot;: &quot;Lillie Curtis&quot;,
+        &quot;email&quot;: &quot;lillie.curtis12@example.com&quot;,
+        &quot;username&quot;: &quot;LillieCurtis&quot;,
+        &quot;contact&quot;: &quot;(342)-510-2258&quot;
+      },
+      {
+        &quot;id&quot;: 10235,
+        &quot;name&quot;: &quot;Genesis Reynolds&quot;,
+        &quot;email&quot;: &quot;genesis@example.com&quot;,
+        &quot;username&quot;: &quot;GenesisReynolds&quot;,
+        &quot;contact&quot;: &quot;(339)-375-1858&quot;
+      },
+      {
+        &quot;id&quot;: 10240,
+        &quot;name&quot;: &quot;Oscar Palmer&quot;,
+        &quot;email&quot;: &quot;oscar.palmer24@example.com&quot;,
+        &quot;username&quot;: &quot;OscarPalmer&quot;,
+        &quot;contact&quot;: &quot;(544)-270-9912&quot;
+      },
+      {
+        &quot;id&quot;: 10245,
+        &quot;name&quot;: &quot;Lena Bishop&quot;,
+        &quot;email&quot;: &quot;Lena Bishop&quot;,
+        &quot;username&quot;: &quot;LenaBishop&quot;,
+        &quot;contact&quot;: &quot;(177)-521-1556&quot;
+      },
+      {
+        &quot;id&quot;: 10250,
+        &quot;name&quot;: &quot;Kent Nguyen&quot;,
+        &quot;email&quot;: &quot;kent.nguyen34@example.com&quot;,
+        &quot;username&quot;: &quot;KentNguyen&quot;,
+        &quot;contact&quot;: &quot;(506)-533-6801&quot;
+      }
+    ];
+
+    ////////////////
+
+  }
+
+})();</textarea>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>.</p>
+  </div>
+</footer>
+
+<script type="text/html" id="complexity-popover-template">
+  <div class="complexity-notice">
+    Complexity : {{ complexity.cyclomatic }} <br>
+    Length : {{ complexity.halstead.length }} <br>
+    Difficulty : {{ complexity.halstead.difficulty.toFixed(2) }} <br>
+    Est # bugs : {{ complexity.halstead.bugs.toFixed(2) }}<br>
+  </div>
+</script>
+
+<script type="text/javascript" src="../../assets/scripts/bundles/core-bundle.js"></script>
+<script type="text/javascript" src="../../assets/scripts/bundles/codemirror.js"></script>
+<script type="text/javascript" src="../../assets/scripts/codemirror.markpopovertext.js"></script>
+<script type="text/javascript" src="report.js"></script>
+<script type="text/javascript" src="report.history.js"></script>
+<script type="text/javascript" src="../../assets/scripts/plato-file.js"></script>
+</body>
+</html>

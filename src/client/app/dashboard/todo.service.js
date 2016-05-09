@@ -14,7 +14,7 @@
     ////////////////
 
     function getTodo(todo) {
-      var todoList = $resource("data/todo.json");
+      var todoList = $resource('data/todo.json');
 
       return todoList.get({
         todo: todo

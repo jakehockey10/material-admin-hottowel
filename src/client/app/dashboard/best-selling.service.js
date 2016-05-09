@@ -14,7 +14,7 @@
     ////////////////
 
     function getBestSelling(img, name, range) {
-      var gbList = $resource("data/best-selling.json");
+      var gbList = $resource('data/best-selling.json');
 
       return gbList.get({
         img: img,

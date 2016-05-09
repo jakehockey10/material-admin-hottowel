@@ -2,34 +2,34 @@
     position: relative;
     min-height: 380px;
     margin-bottom: 30px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); 
-    
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+
     .dash-widget-header {
         position: relative;
-        
+
         .actions {
             display: none;
-            position: absolute; 
+            position: absolute;
             right: 4px;
             top: 6px;
         }
     }
-    
+
     .dash-widget-footer {
         position: absolute;
         left: 0;
         bottom: 0;
         width: 100%;
     }
-    
+
     .dash-widget-title {
         padding: 12px 20px;
         position: absolute;
         width: 100%;
         left: 0;
-        font-weight: 300; 
+        font-weight: 300;
     }
-    
+
     &:hover {
         .dash-widget-header .actions {
             display: block;
@@ -42,18 +42,18 @@
  */
 #site-visits {
     color: rgba(255, 255, 255, 0.9);
-    
+
     .dash-widget-header {
         padding-bottom: 38px;
         background-color: rgba(0,0,0,0.13);
     }
-    
+
     .dash-widget-title {
         bottom: 0;
         background: rgba(0,0,0,0.15);
         color: rgba(255,255,255,0.9);
     }
-    
+
     h3 {
         color: rgba(255, 255, 255, 0.9);
     }
@@ -64,20 +64,20 @@
  */
 #best-selling {
     background-color: #fff;
-    
+
     .dash-widget-header {
         & > img {
             width: 100%;
             height: 155px;
         }
-        
+
         .dash-widget-title {
             padding-bottom: 30px;
             top: 0;
             color: #fff;
             #gradient > .vertical(rgba(0,0,0,0.6); rgba(0,0,0,0));
         }
-        
+
         .main-item {
             padding: 15px;
             color: #fff;
@@ -86,7 +86,7 @@
             left: 0;
             width: 100%;
             #gradient > .vertical(rgba(0,0,0,0); rgba(0,0,0,0.6));
-            
+
             & > h2 {
                 font-weight: 400;
                 font-size: 20px;
@@ -104,23 +104,23 @@
 #weather-widget {
     color: #fff;
     padding: 20px 20px 0;
-    
+
     .weather-status {
         font-size: 40px;
         line-height: 100%;
     }
-    
+
     .weather-icon {
         text-align: center;
         margin-top: 10px;
         height: 150px;
         .bg-option();
-        
+
         /* Weather Icons */
         .wi-item(@icon) {
-            .img-retina('../img/icons/weather/@{icon}.png', '../img/icons/weather/@{icon}@2x.png', 125px, 125px);
+            .img-retina('../iamges/icons/weather/@{icon}.png', '../images/icons/weather/@{icon}@2x.png', 125px, 125px);
         }
-        
+
         &.wi-0 { .wi-item(0); }
         &.wi-1 { .wi-item(1); }
         &.wi-2 { .wi-item(2); }
@@ -170,12 +170,12 @@
         &.wi-46 { .wi-item(18); }
         &.wi-47 { .wi-item(2); }
     }
-    
+
     .weather-info {
         list-style: none;
         padding: 0;
         margin: 3px 0 0 0;
-        
+
         & > li {
             display: inline-block;
             border: 1px solid rgba(255, 255, 255, 0.39);
@@ -183,31 +183,31 @@
             margin-right: 5px;
         }
     }
-    
+
     .weather-list {
         background: rgba(0, 0, 0, 0.08);
         padding: 5px 12px;
         font-size: 16px;
         height: 51px;
         .text-overflow();
-            
+
         & > span {
             margin-right: 7px;
             font-weight: 300;
             display: inline-block;
             line-height: 40px;
             vertical-align: top;
-            
+
             .wli-icon(@icon) {
-                background-image: url('../img/icons/weather/@{icon}.png');
+                background-image: url('../images/icons/weather/@{icon}.png');
             }
-            
+
             &.weather-list-icon {
                 width: 35px;
                 height: 35px;
                 .bg-option();
                 background-size: 30px 30px;
-                
+
                 &.wi-0 { .wli-icon(0); }
                 &.wi-1 { .wli-icon(1); }
                 &.wi-2 { .wli-icon(2); }
@@ -257,7 +257,7 @@
                 &.wi-46 { .wli-icon(18); }
                 &.wi-47 { .wli-icon(2); }
             }
-            
+
             & > i {
                 line-height: 100%;
                 font-size: 39px;
@@ -271,11 +271,11 @@
  */
 #pie-charts {
     background: #fff;
-    
+
     .dash-widget-header {
         color: rgba(255, 255, 255, 0.9);
     }
-    
+
 }
 
 /*
@@ -285,18 +285,18 @@
 .blog-post {
     .bp-header {
         position: relative;
-        
+
         & > img {
             width: 100%;
         }
-         
+
         .bp-title {
-            background: @m-indigo; 
+            background: @m-indigo;
             width: 100%;
             padding: 20px;
             color: #FFF;
             display: block;
-            
+
             & > h2 {
                 color: #FFF;
                 font-weight: 400;
@@ -317,8 +317,8 @@
         position: relative;
         height: 145px;
         width: 100%;
-        .bg-cover('../img/headers/sm/4.png');
-        
+        .bg-cover('../images/headers/sm/4.png');
+
         & > .pv-main {
             border-radius: 50%;
             width: 130px;
@@ -331,50 +331,50 @@
           .transition-duration(300ms);
         }
     }
-    
+
     .pv-body {
         margin-top: 70px;
         padding: 0 20px 20px;
-        
+
         & > h2 {
             margin: 0;
             line-height: 100%;
             font-size: 20px;
             font-weight: 400;
         }
-        
+
         & > small {
             display: block;
             color: #8E8E8E;
             margin: 10px 0 15px;
         }
-        
+
         .pv-contact,
         .pv-follow {
             padding: 0;
             list-style: none;
-            
+
             & > li {
                 display: inline-block;
             }
         }
-        
+
         .pv-follow {
             margin: 20px -20px;
             padding: 10px;
             background-color: #F7F7F7;
             border-top: 1px solid #EEE;
             border-bottom: 1px solid #EEE;
-                   
+
             & > li {
                 padding: 0 10px;
-            } 
+            }
         }
-        
+
         .pv-contact {
             & > li {
                 margin: 0 5px;
-                
+
                 & > .zmdi {
                     line-height: 100%;
                     vertical-align: text-bottom;
@@ -382,7 +382,7 @@
                 }
             }
         }
-        
+
         .pv-follow-btn {
             padding: 7px 20px;
             background: @m-cyan;
@@ -391,8 +391,8 @@
             text-transform: uppercase;
             display: block;
             .transition(all);
-            .transition-duration(300ms); 
-            
+            .transition-duration(300ms);
+
             &:hover {
                 background: darken(@m-cyan, 5%);
             }
@@ -412,22 +412,22 @@
 .picture-list {
     .pl-body {
         padding: 2px;
-        
+
         [class*="col-"] {
             padding: 0;
             padding: 2px;
-            
+
             & > a {
                 display: block;
                 .hover-pop(rgba(0,0,0,0.3));
-            
-                img { 
+
+                img {
                     width: 100%;
                 }
             }
-            
+
         }
-        
+
         .clearfix();
     }
 }
@@ -438,16 +438,16 @@
 .go-social {
     .card-body {
         padding: 0 15px 20px;
-        
+
         [class*="col-"] {
             padding: 12px;
-            
+
             img {
                 .transition(all);
                 .transition-duration(200ms);
-                .backface-visibility(hidden);    
+                .backface-visibility(hidden);
             }
-            
+
             &:hover {
                 img {
                     .scale(1.2);
@@ -462,24 +462,24 @@
  */
 .rating-list {
     padding: 0 0 10px;
-    
+
     .rl-star {
         margin-top: 10px;
         margin-bottom: 4px;
-        
+
         .zmdi {
             font-size: 20px;
-            
+
             &:not(.active) {
                 color: #ccc;
             }
-            
+
             &.active {
                 color: @m-orange;
             }
         }
     }
-    
+
     .lv-item {
         .media {
             .zmdi-star {
@@ -491,7 +491,7 @@
                 top: -2px;
                 left: 6px;
             }
-            
+
             .media-body {
                 padding: 7px 10px 0 5px;
             }

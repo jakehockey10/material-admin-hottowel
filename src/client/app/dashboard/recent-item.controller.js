@@ -12,13 +12,15 @@
     var vm = this;
     vm.title = 'RecentItemController';
 
-    activate();
+    //Get Recent Items Widget Data
+    vm.id = RecentItemService.id;
+    vm.name = RecentItemService.name;
+    vm.parseInt = RecentItemService.price;
+
+    vm.riResult = RecentItemService.getRecentItem(vm.id, vm.name, vm.price);
 
     ////////////////
 
-    function activate() {
-      
-    }
   }
 
 })();

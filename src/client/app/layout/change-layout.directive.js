@@ -31,15 +31,15 @@
           localStorage.setItem('ma-layout-status', 1);
           scope.$apply(function(){
             scope.changeLayout = '1';
-          })
+          });
         }
         else {
           localStorage.setItem('ma-layout-status', 0);
           scope.$apply(function(){
             scope.changeLayout = '0';
-          })
+          });
         }
-      })
+      });
 
     }
   }

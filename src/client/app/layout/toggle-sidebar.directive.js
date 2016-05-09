@@ -27,12 +27,12 @@
           if (scope.modelLeft === false) {
             scope.$apply(function(){
               scope.modelLeft = true;
-            })
+            });
           }
           else {
             scope.$apply(function(){
               scope.modelLeft = false;
-            })
+            });
           }
         }
 
@@ -40,16 +40,16 @@
           if (scope.modelRight === false) {
             scope.$apply(function(){
               scope.modelRight = true;
-            })
+            });
           }
           else {
             scope.$apply(function(){
               scope.modelRight = false;
-            })
+            });
           }
 
         }
-      })
+      });
 
     }
   }

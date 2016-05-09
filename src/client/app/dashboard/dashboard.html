@@ -13,7 +13,6 @@
     <div class="container">
       <div class="block-header">
         <h2>Dashboard</h2>
-        Left: {{appVM.sidebarToggle.left}} | Right: {{appVM.sidebarToggle.right}}
         <ul class="actions">
           <li>
             <a href="">
@@ -85,7 +84,7 @@
 
         <div class="card-body">
           <div class="chart-edge">
-            <div class="flot-chart" data-curvedline-chart></div>
+            <div class="flot-chart" data-curved-line-chart></div>
           </div>
         </div>
       </div>
@@ -95,7 +94,7 @@
           <div class="col-sm-6 col-md-3">
             <div class="mini-charts-item bgm-cyan">
               <div class="clearfix">
-                <div class="chart stats-bar" data-sparkline-bar></div>
+                <div class="chart stats-bar" data-sparkline-bar-chart></div>
                 <div class="count">
                   <small>Website Traffics</small>
                   <h2>987,459</h2>
@@ -107,7 +106,7 @@
           <div class="col-sm-6 col-md-3">
             <div class="mini-charts-item bgm-lightgreen">
               <div class="clearfix">
-                <div class="chart stats-bar-2" data-sparkline-bar></div>
+                <div class="chart stats-bar-2" data-sparkline-bar-chart></div>
                 <div class="count">
                   <small>Website Impressions</small>
                   <h2>356,785K</h2>
@@ -119,7 +118,7 @@
           <div class="col-sm-6 col-md-3">
             <div class="mini-charts-item bgm-orange">
               <div class="clearfix">
-                <div class="chart stats-line" data-sparkline-line></div>
+                <div class="chart stats-line" data-sparkline-line-chart></div>
                 <div class="count">
                   <small>Total Sales</small>
                   <h2>$ 458,778</h2>
@@ -131,7 +130,7 @@
           <div class="col-sm-6 col-md-3">
             <div class="mini-charts-item bgm-bluegray">
               <div class="clearfix">
-                <div class="chart stats-line-2" data-sparkline-line></div>
+                <div class="chart stats-line-2" data-sparkline-line-chart></div>
                 <div class="count">
                   <small>Support Tickets</small>
                   <h2>23,856</h2>
@@ -149,7 +148,7 @@
             <div id="site-visits" class="dash-widget-item bgm-teal">
               <div class="dash-widget-header">
                 <div class="p-20">
-                  <div class="dash-widget-visits" data-sparkline-line></div>
+                  <div class="dash-widget-visits" data-sparkline-line-chart></div>
                 </div>
 
                 <div class="dash-widget-title">For the past 30 days</div>
@@ -203,7 +202,7 @@
                 <div class="clearfix"></div>
 
                 <div class="text-center p-20 m-t-25">
-                  <div class="easy-pie main-pie" data-percent="75" data-easypie-chart>
+                  <div class="easy-pie main-pie" data-percent="75" data-easy-pie-chart>
                     <div class="percent">45</div>
                     <div class="pie-title">Total Emails Sent</div>
                   </div>
@@ -211,11 +210,11 @@
               </div>
 
               <div class="p-t-20 p-b-20 text-center">
-                <div class="easy-pie sub-pie-1" data-percent="56" data-easypie-chart>
+                <div class="easy-pie sub-pie-1" data-percent="56" data-easy-pie-chart>
                   <div class="percent">56</div>
                   <div class="pie-title">Bounce Rate</div>
                 </div>
-                <div class="easy-pie sub-pie-2" data-percent="84" data-easypie-chart>
+                <div class="easy-pie sub-pie-2" data-percent="84" data-easy-pie-chart>
                   <div class="percent">84</div>
                   <div class="pie-title">Total Opened</div>
                 </div>
@@ -244,7 +243,7 @@
                 <a class="lv-item" href="" data-ng-repeat="w in bestSellingVM.bsResult.list">
                   <div class="media">
                     <div class="pull-left">
-                      <img class="lv-img-sm" data-ng-src="img/widgets/{{ w.img }}" alt="">
+                      <img class="lv-img-sm" data-ng-src="../../images/widgets/{{ w.img }}" alt="">
                     </div>
                     <div class="media-body">
                       <div class="lv-title">{{ w.name }}</div>
@@ -438,7 +437,7 @@
                 <a class="lv-item" href="" data-ng-repeat="w in recentPostVM.rpResult.list">
                   <div class="media">
                     <div class="pull-left">
-                      <img class="lv-img-sm" data-ng-src="img/profile-pics/{{ w.img }}" alt="">
+                      <img class="lv-img-sm" data-ng-src="../../images/profile-pics/{{ w.img }}" alt="">
                     </div>
                     <div class="media-body">
                       <div class="lv-title">{{ w.user }}</div>
